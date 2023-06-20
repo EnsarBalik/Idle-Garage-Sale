@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class ValueTrigger : MonoBehaviour
 {
     public Image fillImage;
-    private bool isCoolDown;
+    private bool isCoolDown = true;
     private float coolDownSec = 1f;
 
 

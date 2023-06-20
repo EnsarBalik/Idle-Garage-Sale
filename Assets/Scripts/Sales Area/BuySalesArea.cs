@@ -10,7 +10,7 @@ public class BuySalesArea : MonoBehaviour
     public SalesAreaController saleArea;
     public TextMeshPro SellAreaText;
     public SpriteRenderer SellAreaImage;
-    private bool isSaled;
+    public bool isSaled;
 
     private void Sale()
     {
@@ -21,6 +21,7 @@ public class BuySalesArea : MonoBehaviour
 
     private static void CheckMoney()
     {
+        Debug.Log("Check Money");
     }
 
     private void OnTriggerEnter(Collider other)

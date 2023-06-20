@@ -8,21 +8,25 @@ using UnityEngine;
 
 public class SalesAreaController : MonoBehaviour
 {
+    public BuySalesArea BuySalesArea;
+
     public Transform place;
 
     private bool occupied;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") && !occupied)
+        if (other.gameObject.CompareTag("Player") && !occupied && BuySalesArea.isSaled)
         {
             var valuableList = ValueController.instance.valuableList;
-
-            valuableList[^1].transform.DOJump(place.position, 0.5f, 0, 0.5f);
-            valuableList[^1].transform.parent = transform;
-            valuableList[^1].transform.rotation = quaternion.identity;
-            valuableList.Remove(valuableList[^1]);
-            occupied = true;
+            if (valuableList.Count > 1)
+            {
+                valuableList[^1].transform.DOJump(place.position, 0.5f, 0, 0.5f);
+                valuableList[^1].transform.parent = transform;
+                valuableList[^1].transform.rotation = quaternion.identity;
+                valuableList.Remove(valuableList[^1]);
+                occupied = true;
+            }
         }
     }
 }
