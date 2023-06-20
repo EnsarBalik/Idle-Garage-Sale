@@ -10,33 +10,43 @@ public class ValueTrigger : MonoBehaviour
     public Image fillImage;
     private bool isCoolDown;
     private float coolDownSec = 1f;
-    
+
+
+    private void Start()
+    {
+        fillImage.fillAmount = 0;
+    }
 
     public void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag($"Player"))
         {
             if (transform.childCount <= 0) return;
-            if (isCoolDown) return;
-            ValueController.instance.StackObjet(transform.GetChild(0).gameObject, ValueController.instance.valuableList.Count - 1);
-            transform.GetChild(0).parent = ValueController.instance.transform;
-            isCoolDown = true;
-            coolDownTest();
+            fillImage.gameObject.SetActive(true);
+            if (!isCoolDown)
+            {
+                ValueController.instance.StackObjet(transform.GetChild(0).gameObject, ValueController.instance.valuableList.Count - 1);
+                transform.GetChild(0).parent = ValueController.instance.transform;
+                isCoolDown = true;
+            }
+            if (isCoolDown)
+            {
+                fillImage.fillAmount += 1 / coolDownSec * Time.deltaTime;
+                if (fillImage.fillAmount >= 1)
+                {
+                    fillImage.fillAmount = 0;
+                    isCoolDown = false;
+                }
+            }
             //StartCoroutine(ValueController.instance.StackValues(gameObject, transform.GetChild(0).gameObject, ValueController.instance.valuableList.Count - 1, 1f));
         }
     }
 
-    private void coolDownTest()
+    public void OnTriggerExit(Collider other)
     {
-        if (isCoolDown)
+        if (other.gameObject.CompareTag("Player"))
         {
-            fillImage.fillAmount -= 1 / coolDownSec * Time.deltaTime;
-            if (fillImage.fillAmount <= 0)
-            {
-                fillImage.fillAmount = 0;
-                isCoolDown = false;
-            }
+            fillImage.gameObject.SetActive(false);
         }
     }
-    
 }

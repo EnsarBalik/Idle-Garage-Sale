@@ -25,7 +25,8 @@ public class ValueController : MonoBehaviour
         value++;
         Vector3 newPos = valuableList[index].transform.position;
         newPos.y += 1.3f;
-        //other.transform.DOJump(newPos, 1, 1, 0.5f).OnComplete(() => { newPos.y += 1.3f; });
-        other.transform.position = newPos;
+        newPos.z = valuableList[0].transform.position.z;
+        newPos.x = valuableList[0].transform.position.x;
+        other.transform.DOJump(newPos, 0.1f, 0, 0.35f);
     }
 }
