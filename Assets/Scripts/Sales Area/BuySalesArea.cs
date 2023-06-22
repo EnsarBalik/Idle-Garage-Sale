@@ -11,17 +11,18 @@ public class BuySalesArea : MonoBehaviour
     public TextMeshPro SellAreaText;
     public SpriteRenderer SellAreaImage;
     public bool isSaled;
+    public int cost;
 
-    private void Sale()
+    private void Sale(int Cost)
     {
-        SellAreaImage.color = Color.white;
-        SellAreaText.color = Color.white;
-        CheckMoney();
-    }
-
-    private static void CheckMoney()
-    {
-        Debug.Log("Check Money");
+        Cost = cost;
+        if (PlayerPrefs.GetInt("myCoin") >= Cost)
+        {
+            SellAreaImage.color = Color.white;
+            SellAreaText.color = Color.white;
+            GameManager.instance.SpendMoney(cost);
+            isSaled = true;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -29,8 +30,7 @@ public class BuySalesArea : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             if (isSaled) return;
-            Sale();
-            isSaled = true;
+            Sale(cost);
         }
     }
 }
