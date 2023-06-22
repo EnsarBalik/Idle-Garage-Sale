@@ -277,7 +277,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sell Area
+  m_text: Selling Area
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 302eabd2155f6734fa4b3a7315c40822, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: f875673988515aa49800de835feed8a0, type: 2}
@@ -304,7 +304,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 4.35
+  m_fontSize: 3.55
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -399,7 +399,9 @@ MonoBehaviour:
   saleArea: {fileID: 2193530254454662496}
   SellAreaText: {fileID: 2193530255706706436}
   SellAreaImage: {fileID: 2193530254407622928}
-  isSaled: 0
+  isSold: 0
+  cost: 0
+  id: 
 --- !u!65 &6140515169221538544
 BoxCollider:
   m_ObjectHideFlags: 0

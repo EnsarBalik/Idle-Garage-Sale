@@ -27,6 +27,7 @@ public class ValueController : MonoBehaviour
         newPos.y += 1.3f;
         newPos.z = valuableList[0].transform.position.z;
         newPos.x = valuableList[0].transform.position.x;
-        other.transform.DOJump(newPos, 0.1f, 0, 0.35f);
+        //other.transform.DOJump(newPos, 0.1f, 0, 0.35f);
+        other.transform.position = newPos;
     }
 }

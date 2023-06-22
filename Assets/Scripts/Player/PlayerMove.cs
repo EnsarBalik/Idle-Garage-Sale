@@ -8,11 +8,12 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     public static PlayerMove instance;
-    
+
     [SerializeField] private Rigidbody rb;
     [SerializeField] private DynamicJoystick joystick;
-
     [SerializeField] private float moveSpeed;
+
+    public Animator playerAnimator;
 
     private void Start()
     {
@@ -24,8 +25,33 @@ public class PlayerMove : MonoBehaviour
         rb.velocity = new Vector3(joystick.Horizontal * moveSpeed, rb.velocity.y, joystick.Vertical * moveSpeed);
         if (joystick.Horizontal != 0 || joystick.Vertical != 0)
         {
+            playerAnimator.speed = rb.velocity.magnitude / 10;
             transform.rotation = Quaternion.LookRotation(rb.velocity);
+            if (ValueController.instance.valuableList.Count > 1)
+            {
+                playerAnimator.SetBool("Running", false);
+                playerAnimator.SetBool("CarryRun", true);
+            }
+            else
+            {
+                playerAnimator.SetBool("Running", true);
+                playerAnimator.SetBool("CarryRun", false);
+            }
+        }
+        else
+        {
+            playerAnimator.SetBool("Running", false);
+            playerAnimator.SetBool("CarryRun", false);
+            playerAnimator.speed = 1;
+        }
+
+        if (ValueController.instance.valuableList.Count > 1)
+        {
+            playerAnimator.SetBool("IdleCarry", true);
+        }
+        else
+        {
+            playerAnimator.SetBool("IdleCarry", false);
         }
     }
-
 }

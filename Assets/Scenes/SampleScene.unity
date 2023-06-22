@@ -4099,11 +4099,11 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 449002514007748911}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: a6e1b293f7ed5584fa548ddde966e03e, type: 3}
+  m_Controller: {fileID: 9100000, guid: 1b51d9e3daff2f944a9e7c92f056cc6d, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -4154,6 +4154,7 @@ MonoBehaviour:
   rb: {fileID: 6598003321980449265}
   joystick: {fileID: 1402782378}
   moveSpeed: 10
+  playerAnimator: {fileID: 6598003321980449263}
 --- !u!114 &6598003321980449267
 MonoBehaviour:
   m_ObjectHideFlags: 0
