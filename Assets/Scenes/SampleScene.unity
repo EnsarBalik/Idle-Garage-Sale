@@ -212,6 +212,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8398256605019789359, guid: 91d87f14816621242a1ff0f4d5fbaa55,
         type: 3}
+      propertyPath: id
+      value: SellArea2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8398256605019789359, guid: 91d87f14816621242a1ff0f4d5fbaa55,
+        type: 3}
       propertyPath: cost
       value: 200
       objectReference: {fileID: 0}
@@ -1548,6 +1553,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8398256605019789359, guid: 91d87f14816621242a1ff0f4d5fbaa55,
         type: 3}
+      propertyPath: id
+      value: SellArea1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8398256605019789359, guid: 91d87f14816621242a1ff0f4d5fbaa55,
+        type: 3}
       propertyPath: cost
       value: 50
       objectReference: {fileID: 0}
@@ -2167,6 +2177,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8398256605019789359, guid: 91d87f14816621242a1ff0f4d5fbaa55,
         type: 3}
+      propertyPath: id
+      value: SellArea3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8398256605019789359, guid: 91d87f14816621242a1ff0f4d5fbaa55,
+        type: 3}
       propertyPath: cost
       value: 200
       objectReference: {fileID: 0}
@@ -2282,6 +2297,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8398256605019789359, guid: 91d87f14816621242a1ff0f4d5fbaa55,
+        type: 3}
+      propertyPath: id
+      value: SellArea5
       objectReference: {fileID: 0}
     - target: {fileID: 8398256605019789359, guid: 91d87f14816621242a1ff0f4d5fbaa55,
         type: 3}
@@ -2700,6 +2720,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8398256605019789359, guid: 91d87f14816621242a1ff0f4d5fbaa55,
+        type: 3}
+      propertyPath: id
+      value: SellArea4
       objectReference: {fileID: 0}
     - target: {fileID: 8398256605019789359, guid: 91d87f14816621242a1ff0f4d5fbaa55,
         type: 3}
@@ -3418,6 +3443,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8398256605019789359, guid: 91d87f14816621242a1ff0f4d5fbaa55,
+        type: 3}
+      propertyPath: id
+      value: SellArea0
       objectReference: {fileID: 0}
     - target: {fileID: 8398256605019789359, guid: 91d87f14816621242a1ff0f4d5fbaa55,
         type: 3}
