@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c43881c3428fbb047ae11d58e13e31cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BuySalesArea: {fileID: 0}
   place: {fileID: 2193530255128609561}
 --- !u!1 &2193530255128609562
 GameObject:
@@ -234,7 +235,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
+  - {fileID: 2100000, guid: f875673988515aa49800de835feed8a0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -276,10 +277,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SELL AREA
+  m_text: Sell Area
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
-  m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 302eabd2155f6734fa4b3a7315c40822, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: f875673988515aa49800de835feed8a0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -303,7 +304,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 4.5
+  m_fontSize: 4.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -398,6 +399,7 @@ MonoBehaviour:
   saleArea: {fileID: 2193530254454662496}
   SellAreaText: {fileID: 2193530255706706436}
   SellAreaImage: {fileID: 2193530254407622928}
+  isSaled: 0
 --- !u!65 &6140515169221538544
 BoxCollider:
   m_ObjectHideFlags: 0
