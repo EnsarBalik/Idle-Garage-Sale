@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    
+
     public int coin;
     [SerializeField] private TextMeshProUGUI coinText;
 
@@ -23,8 +24,9 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.N))
         {
-            coin += 100;
-            StartCoroutine(_coinText());
+            CollectCoin(100);
+            coinText.gameObject.transform.DOShakeScale(0.5f)
+                .OnComplete(() => coinText.gameObject.transform.localScale = new Vector3(1, 1, 1));
             PlayerPrefs.SetInt("myCoin", coin);
         }
     }
@@ -35,21 +37,21 @@ public class GameManager : MonoBehaviour
         StartCoroutine(_coinText());
         PlayerPrefs.SetInt("myCoin", coin);
     }
-    
-    public void CollectCoin(int coinCollect)
+
+    private void CollectCoin(int coinCollect)
     {
         coin += coinCollect;
         StartCoroutine(_coinText());
         PlayerPrefs.SetInt("myCoin", coin);
     }
-    
+
     private IEnumerator _coinText()
     {
         float totalTime = 2f;
         float elapsedTime = 0;
         int coinAmount = PlayerPrefs.GetInt("myCoin");
         float step = (coin - coinAmount) / totalTime;
-        
+
         while (elapsedTime < totalTime)
         {
             elapsedTime += Time.deltaTime;
@@ -58,6 +60,4 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
     }
-    
-    
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using DG.Tweening;
 
 public class BuyNewIsland : MonoBehaviour
 {
@@ -41,6 +42,7 @@ public class BuyNewIsland : MonoBehaviour
             island.SetActive(true);
             triggers.SetActive(false);
             gameObject.SetActive(false);
+            island.transform.DOShakeScale(0.5f, 10f, 10, 360f);
         }
     }
 

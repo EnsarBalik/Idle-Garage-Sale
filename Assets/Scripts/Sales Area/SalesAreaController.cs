@@ -12,8 +12,8 @@ public class SalesAreaController : MonoBehaviour
 
     public Transform place;
 
-    private bool occupied;
-
+    public bool occupied;
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player") && !occupied && BuySalesArea.isSold)

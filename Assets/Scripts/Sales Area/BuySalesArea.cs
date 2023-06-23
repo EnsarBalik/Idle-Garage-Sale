@@ -23,17 +23,20 @@ public class BuySalesArea : MonoBehaviour
                 PlayerPrefs.SetFloat(id, 1f);
             }
         }
-        
+
         isSold = PlayerPrefs.GetFloat(id) == 1f;
+
+        SellAreaText.text = !isSold ? "$ " + cost : "Empty";
     }
 
     private void LateUpdate()
     {
-        if (isSold)
-        {
-            SellAreaImage.color = Color.white;
-            SellAreaText.color = Color.white;
-        }
+        if (!isSold) return;
+        var salesAreaController = gameObject.transform.GetChild(1).GetComponent<SalesAreaController>();
+        SellAreaText.text = salesAreaController.occupied ? " " : "Empty";
+        SellAreaImage.color = Color.white;
+        SellAreaText.color = Color.white;
+        
     }
 
     private void Sale(int Cost)

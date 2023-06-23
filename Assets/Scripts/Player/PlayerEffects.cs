@@ -12,21 +12,26 @@ public class PlayerEffects : MonoBehaviour
     private void Start()
     {
         _playerMove = gameObject.GetComponent<PlayerMove>();
+
+        InvokeRepeating(nameof(StartSmoke), 0.1f, 1f);
     }
 
     private void LateUpdate()
     {
-        StartSmoke();
-        StopSmoke();
     }
 
     private void StartSmoke()
     {
-        if (_playerMove.playPauseSmoke)
+        switch (_playerMove.playPauseSmoke)
         {
-            // var dustEffectMain = dustEffect.main;
-            // dustEffectMain.startSpeed = _playerMove.GetComponent<Rigidbody>().velocity.magnitude;
-            dustEffect.Play();
+            case true:
+                dustEffect.Play();
+                var dustEffectMain = dustEffect.main;
+                dustEffectMain.startSpeed = _playerMove.GetComponent<Rigidbody>().velocity.magnitude / 10;
+                break;
+            case false:
+                dustEffect.Stop();
+                break;
         }
     }
 
