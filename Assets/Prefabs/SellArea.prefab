@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c43881c3428fbb047ae11d58e13e31cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BuySalesArea: {fileID: 0}
+  BuySalesArea: {fileID: 8398256605019789359}
   place: {fileID: 2193530255128609561}
 --- !u!1 &2193530255128609562
 GameObject:
@@ -396,12 +396,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a5a543f58692d74b8c085da8bf21c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saleArea: {fileID: 2193530254454662496}
+  id: SellArea0
+  isSold: 0
   SellAreaText: {fileID: 2193530255706706436}
   SellAreaImage: {fileID: 2193530254407622928}
-  isSold: 0
-  cost: 0
-  id: 
+  cost: 150
 --- !u!65 &6140515169221538544
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -410,8 +409,8 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2193530256208268994}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 6.1839724, y: 1, z: 6.7910595}
   m_Center: {x: 0, y: 0, z: 0}
