@@ -66,4 +66,12 @@ public class BuyNewIsland : MonoBehaviour
             }
         }
     }
+    
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            fillImage.gameObject.SetActive(false);
+        }
+    }
 }
