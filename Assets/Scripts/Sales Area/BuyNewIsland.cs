@@ -7,17 +7,21 @@ using TMPro;
 
 public class BuyNewIsland : MonoBehaviour
 {
+    public string id;
     public Image fillImage;
     public GameObject island;
     public GameObject triggers;
+    public bool isSold;
     public int cost;
 
     private bool isCoolDown = true;
     private float coolDownSec = 1f;
     private void Start()
     {
+        isSold = PlayerPrefs.GetFloat(id) == 1f;
+        
         fillImage.fillAmount = 0;
-        if (UserData.instance.isSold)
+        if (isSold)
         {
             island.SetActive(true);
             triggers.SetActive(false);
@@ -27,12 +31,12 @@ public class BuyNewIsland : MonoBehaviour
 
     private void Sale(int Cost)
     {
-        if (UserData.instance.isSold) return;
+        if (isSold) return;
         if (PlayerPrefs.GetInt("myCoin") >= Cost)
         {
             GameManager.instance.SpendMoney(Cost);
-            UserData.instance.isSold = true;
-            PlayerPrefs.SetFloat(UserData.instance.id, 1f);
+            isSold = true;
+            PlayerPrefs.SetFloat(id, 1f);
             fillImage.gameObject.SetActive(false);
             island.SetActive(true);
             triggers.SetActive(false);

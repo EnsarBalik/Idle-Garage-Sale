@@ -8,37 +8,45 @@ using TMPro;
 
 public class BuySalesArea : MonoBehaviour
 {
+    public string id;
     public TextMeshPro SellAreaText;
     public SpriteRenderer SellAreaImage;
+    public bool isSold;
     public int cost;
 
     private void Start()
     {
-        PlayerPrefs.SetFloat(UserData.instance.id, 1f);
+        if (id == "SellArea0")
+        {
+            if (PlayerPrefs.GetFloat(id) == 0)
+            {
+                PlayerPrefs.SetFloat(id, 1f);
+            }
+        }
         
-        if (UserData.instance.isSold)
+        isSold = PlayerPrefs.GetFloat(id) == 1f;
+    }
+
+    private void LateUpdate()
+    {
+        if (isSold)
         {
             SellAreaImage.color = Color.white;
             SellAreaText.color = Color.white;
         }
     }
 
-    private void LateUpdate()
-    {
-        
-    }
-
     private void Sale(int Cost)
     {
-        if (UserData.instance.isSold) return;
+        if (isSold) return;
         Cost = cost;
         if (PlayerPrefs.GetInt("myCoin") >= Cost)
         {
             SellAreaImage.color = Color.white;
             SellAreaText.color = Color.white;
             GameManager.instance.SpendMoney(cost);
-            UserData.instance.isSold = true;
-            PlayerPrefs.SetFloat(UserData.instance.id, 1f);
+            isSold = true;
+            PlayerPrefs.SetFloat(id, 1f);
         }
     }
 
@@ -46,7 +54,7 @@ public class BuySalesArea : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (UserData.instance.isSold) return;
+            if (isSold) return;
             Sale(cost);
         }
     }

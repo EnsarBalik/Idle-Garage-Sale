@@ -4573,12 +4573,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eed30b30d1d3cf542af18b65c95bf125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: NewIsland
-  isSold: 0
+  id: NewIsland0
   fillImage: {fileID: 948135253}
   island: {fileID: 1328896961}
   triggers: {fileID: 1428614976}
   cost: 200
+  isSold: 0
 --- !u!1 &6428473482212193676
 GameObject:
   m_ObjectHideFlags: 0

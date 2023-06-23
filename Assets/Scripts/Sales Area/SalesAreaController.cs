@@ -16,7 +16,7 @@ public class SalesAreaController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") && !occupied && UserData.instance.isSold)
+        if (other.gameObject.CompareTag("Player") && !occupied && BuySalesArea.isSold)
         {
             var valuableList = ValueController.instance.valuableList;
             if (valuableList.Count > 1)
