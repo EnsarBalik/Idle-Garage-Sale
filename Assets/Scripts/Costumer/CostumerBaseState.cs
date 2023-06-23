@@ -1,18 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class CostumerBaseState : MonoBehaviour
+public abstract class CostumerBaseState
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public abstract void EnterState(CostumerStateManager costumer);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public abstract void UpdateState(CostumerStateManager costumer);
+
+    public abstract void CompletedAssignment(CostumerStateManager costumer);
 }

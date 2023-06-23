@@ -1,18 +1,24 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CostumerStateManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private CostumerBaseState currentState;
+    private CostumerAssignmentState _assignmentState = new CostumerAssignmentState();
+
+    private void Start()
     {
+        currentState = _assignmentState;
         
+        currentState.EnterState(this);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SwitchState(CostumerBaseState state)
     {
-        
+        currentState = state;
+        state.EnterState(this);
     }
+    
 }
