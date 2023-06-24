@@ -18,4 +18,9 @@ public class CostumerAssignmentState : CostumerBaseState
     {
         //todo move away from the task area
     }
+
+    public override void AssignTask(CostumerStateManager costumer)
+    {
+        //todo assign a task costumer
+    }
 }

@@ -213,6 +213,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.008927545, y: 18.896254, z: 1}
   m_Center: {x: 0, y: 8.94813, z: 0}
+--- !u!4 &141836162 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2193530256208268993, guid: 91d87f14816621242a1ff0f4d5fbaa55,
+    type: 3}
+  m_PrefabInstance: {fileID: 2193530255190278187}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &183524474
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,6 +271,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2193530254454662496, guid: 91d87f14816621242a1ff0f4d5fbaa55,
+        type: 3}
+      propertyPath: fillImage
+      value: 
+      objectReference: {fileID: 948135253}
     - target: {fileID: 2193530254454662496, guid: 91d87f14816621242a1ff0f4d5fbaa55,
         type: 3}
       propertyPath: BuySalesArea
@@ -355,6 +366,11 @@ PrefabInstance:
       propertyPath: cost
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 8398256605019789359, guid: 91d87f14816621242a1ff0f4d5fbaa55,
+        type: 3}
+      propertyPath: fillImage
+      value: 
+      objectReference: {fileID: 948135253}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91d87f14816621242a1ff0f4d5fbaa55, type: 3}
 --- !u!114 &265956739 stripped
@@ -735,6 +751,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   isCollected: 0
+--- !u!4 &428681183 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2193530256208268993, guid: 91d87f14816621242a1ff0f4d5fbaa55,
+    type: 3}
+  m_PrefabInstance: {fileID: 265956738}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &487009845
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,6 +1092,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f14b2e80be759840b9f450256dd4d9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  taskLocations:
+  - {fileID: 141836162}
+  - {fileID: 864925588}
+  - {fileID: 428681183}
+  - {fileID: 1482676128}
+  - {fileID: 2111341810}
+  - {fileID: 1669282824}
 --- !u!136 &686357376
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1764,6 +1793,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2193530254454662496, guid: 91d87f14816621242a1ff0f4d5fbaa55,
         type: 3}
+      propertyPath: fillImage
+      value: 
+      objectReference: {fileID: 948135253}
+    - target: {fileID: 2193530254454662496, guid: 91d87f14816621242a1ff0f4d5fbaa55,
+        type: 3}
       propertyPath: BuySalesArea
       value: 
       objectReference: {fileID: 864925586}
@@ -1852,6 +1886,11 @@ PrefabInstance:
       propertyPath: cost
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 8398256605019789359, guid: 91d87f14816621242a1ff0f4d5fbaa55,
+        type: 3}
+      propertyPath: fillImage
+      value: 
+      objectReference: {fileID: 948135253}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91d87f14816621242a1ff0f4d5fbaa55, type: 3}
 --- !u!114 &864925586 stripped
@@ -1866,6 +1905,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a5a543f58692d74b8c085da8bf21c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &864925588 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2193530256208268993, guid: 91d87f14816621242a1ff0f4d5fbaa55,
+    type: 3}
+  m_PrefabInstance: {fileID: 864925585}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &922355404
 GameObject:
   m_ObjectHideFlags: 0
@@ -2719,6 +2764,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2193530254454662496, guid: 91d87f14816621242a1ff0f4d5fbaa55,
         type: 3}
+      propertyPath: fillImage
+      value: 
+      objectReference: {fileID: 948135253}
+    - target: {fileID: 2193530254454662496, guid: 91d87f14816621242a1ff0f4d5fbaa55,
+        type: 3}
       propertyPath: BuySalesArea
       value: 
       objectReference: {fileID: 1482676126}
@@ -2807,6 +2857,11 @@ PrefabInstance:
       propertyPath: cost
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 8398256605019789359, guid: 91d87f14816621242a1ff0f4d5fbaa55,
+        type: 3}
+      propertyPath: fillImage
+      value: 
+      objectReference: {fileID: 948135253}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91d87f14816621242a1ff0f4d5fbaa55, type: 3}
 --- !u!114 &1482676126 stripped
@@ -2821,6 +2876,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a5a543f58692d74b8c085da8bf21c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1482676128 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2193530256208268993, guid: 91d87f14816621242a1ff0f4d5fbaa55,
+    type: 3}
+  m_PrefabInstance: {fileID: 1482676125}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1669282821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2828,6 +2889,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2193530254454662496, guid: 91d87f14816621242a1ff0f4d5fbaa55,
+        type: 3}
+      propertyPath: fillImage
+      value: 
+      objectReference: {fileID: 948135253}
     - target: {fileID: 2193530254454662496, guid: 91d87f14816621242a1ff0f4d5fbaa55,
         type: 3}
       propertyPath: BuySalesArea
@@ -2918,6 +2984,11 @@ PrefabInstance:
       propertyPath: cost
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8398256605019789359, guid: 91d87f14816621242a1ff0f4d5fbaa55,
+        type: 3}
+      propertyPath: fillImage
+      value: 
+      objectReference: {fileID: 948135253}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91d87f14816621242a1ff0f4d5fbaa55, type: 3}
 --- !u!114 &1669282822 stripped
@@ -2932,6 +3003,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a5a543f58692d74b8c085da8bf21c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1669282824 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2193530256208268993, guid: 91d87f14816621242a1ff0f4d5fbaa55,
+    type: 3}
+  m_PrefabInstance: {fileID: 1669282821}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1915581840
 GameObject:
   m_ObjectHideFlags: 0
@@ -3378,6 +3455,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2193530254454662496, guid: 91d87f14816621242a1ff0f4d5fbaa55,
         type: 3}
+      propertyPath: fillImage
+      value: 
+      objectReference: {fileID: 948135253}
+    - target: {fileID: 2193530254454662496, guid: 91d87f14816621242a1ff0f4d5fbaa55,
+        type: 3}
       propertyPath: BuySalesArea
       value: 
       objectReference: {fileID: 2111341808}
@@ -3466,6 +3548,11 @@ PrefabInstance:
       propertyPath: cost
       value: 500
       objectReference: {fileID: 0}
+    - target: {fileID: 8398256605019789359, guid: 91d87f14816621242a1ff0f4d5fbaa55,
+        type: 3}
+      propertyPath: fillImage
+      value: 
+      objectReference: {fileID: 948135253}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91d87f14816621242a1ff0f4d5fbaa55, type: 3}
 --- !u!114 &2111341808 stripped
@@ -3480,6 +3567,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a5a543f58692d74b8c085da8bf21c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &2111341810 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2193530256208268993, guid: 91d87f14816621242a1ff0f4d5fbaa55,
+    type: 3}
+  m_PrefabInstance: {fileID: 2111341807}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2126813399
 GameObject:
   m_ObjectHideFlags: 0
@@ -4141,6 +4234,11 @@ PrefabInstance:
       propertyPath: occupied
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2193530254454662496, guid: 91d87f14816621242a1ff0f4d5fbaa55,
+        type: 3}
+      propertyPath: fillImage
+      value: 
+      objectReference: {fileID: 948135253}
     - target: {fileID: 2193530256208268993, guid: 91d87f14816621242a1ff0f4d5fbaa55,
         type: 3}
       propertyPath: m_RootOrder
@@ -4206,6 +4304,11 @@ PrefabInstance:
       propertyPath: id
       value: SellArea0
       objectReference: {fileID: 0}
+    - target: {fileID: 8398256605019789359, guid: 91d87f14816621242a1ff0f4d5fbaa55,
+        type: 3}
+      propertyPath: fillImage
+      value: 
+      objectReference: {fileID: 948135253}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91d87f14816621242a1ff0f4d5fbaa55, type: 3}
 --- !u!23 &2193530255405647716

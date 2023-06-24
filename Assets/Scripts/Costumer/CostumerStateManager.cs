@@ -6,7 +6,9 @@ using UnityEngine;
 public class CostumerStateManager : MonoBehaviour
 {
     private CostumerBaseState currentState;
-    private CostumerAssignmentState _assignmentState = new CostumerAssignmentState();
+    private readonly CostumerAssignmentState _assignmentState = new CostumerAssignmentState();
+
+    public List<Transform> taskLocations;
 
     private void Start()
     {

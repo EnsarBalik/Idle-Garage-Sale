@@ -5,6 +5,7 @@ using DG.Tweening;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SalesAreaController : MonoBehaviour
 {
@@ -13,20 +14,17 @@ public class SalesAreaController : MonoBehaviour
     public Transform place;
 
     public bool occupied;
-    
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") && !occupied && BuySalesArea.isSold)
+        var valuableList = ValueController.instance.valuableList;
+        if (valuableList.Count > 1 && !occupied && BuySalesArea.isSold)
         {
-            var valuableList = ValueController.instance.valuableList;
-            if (valuableList.Count > 1)
-            {
-                valuableList[^1].transform.DOJump(place.position, 0.5f, 0, 0.5f);
-                valuableList[^1].transform.parent = transform;
-                valuableList[^1].transform.rotation = quaternion.identity;
-                valuableList.Remove(valuableList[^1]);
-                occupied = true;
-            }
+            valuableList[^1].transform.DOJump(place.position, 0.5f, 0, 0.5f);
+            valuableList[^1].transform.parent = transform;
+            valuableList[^1].transform.rotation = quaternion.identity;
+            valuableList.Remove(valuableList[^1]);
+            occupied = true;
         }
     }
 }
