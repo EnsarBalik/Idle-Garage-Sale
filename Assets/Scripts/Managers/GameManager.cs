@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.N))
         {
             CollectCoin(100);
-            coinText.gameObject.transform.DOShakeScale(0.5f)
+            coinText.gameObject.transform.DOShakeScale(0.5f, 0.3f)
                 .OnComplete(() => coinText.gameObject.transform.localScale = new Vector3(1, 1, 1));
             PlayerPrefs.SetInt("myCoin", coin);
         }
